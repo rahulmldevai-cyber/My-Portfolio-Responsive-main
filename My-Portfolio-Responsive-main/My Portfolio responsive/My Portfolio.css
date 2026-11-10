@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        :root{
+            --primary-color: #192079fd;
+            --background-color: #f4f4f4;
+            --text-color: rgb(0, 0, 0);
+            --border-color: #ddd;
+            --card-background: #fff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            text-align: center;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky; 
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        header h1 {
+            margin: 0;
+            padding: 0 1rem;
+            font-size: 1.8rem;
+            /* Added transition effect */
+            transition: all 0.5s ease;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Hover effect for the name */
+        header h1:hover {
+            color: #e6cd10; /* Gold color on hover */
+            transform: scale(1.05);
+            text-shadow: 0 0 10px rgb(3, 17, 27);
+        }
+
+        /* Optional: Add a subtle underline animation */
+        header h1::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 4px;
+            left: 50%;
+            background-color:  #e2da08;
+            transition: all 0.3s ease;
+        }
+
+        header h1:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        nav ul {
+            display: flex; 
+            justify-content: center;
+            gap: 26px;
+            flex-wrap: wrap;
+            padding: 0 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 10px; 
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--border-color); 
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 40px 0; 
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        #about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; 
+            object-fit: cover;
+            border: 5px solid white;
+            background-color: #d0e4f8; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 50px auto; 
+            width: 80%;
+        }
+
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto; 
+            border-collapse: collapse; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            height: auto;
+        } 
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+
+        #projects ul {
+            padding: 0;
+        }
+
+        #projects ul li {
+            background-color: var(--card-background);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 5px;
+        }
+
+        /* Contact form styling */
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto; 
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            background-color: var(--card-background);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            box-sizing: border-box; 
+        }
+
+        /* Fixed button alignment */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #4785cb;
+        }
+
+        .container{
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #000000;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 40px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 15px;
+            }
+            
+            main {
+                padding: 0 15px;
+                margin: 20px auto;
+            }
+            
+            section {
+                padding: 30px 0;
+            }
+            
+            #about img {
+                width: 120px;
+                height: 120px;
+            }
+            
+            table {
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+            
+            #contact form {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            /* Make contact form responsive without table */
+            #contact table {
+                display: block;
+            }
+            
+            #contact tr {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+            }
+            
+            #contact td {
+                padding: 5px;
+                border: none;
+            }
+            
+            #contact td:first-child {
+                padding-bottom: 5px;
+            }
+            
+            #contact td:last-child {
+                padding-top: 0;
+            }
+            
+            /* Center the button */
+            #contact tr:last-child td {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            #about img {
+                width: 100px;
+                height: 100px;
+            }
+            
+            table {
+                font-size: 0.8rem;
+            }
+            
+            th, td {
+                padding: 6px;
+            }
+            
+            #projects ul li {
+                padding: 15px;
+            }
+            
+            #contact form {
+                padding: 15px;
+            }
+            
+            button {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
